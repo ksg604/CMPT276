@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_menu__curr_foreground"
+    tools:context=".OptionsActivity">
+
+    <TextView
+        android:id="@+id/settingsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="@string/settings"
+        android:textColor="#8B4513"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerBoardSize"
+        android:layout_width="299dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/boardSizeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTxt" />
+
+    <Spinner
+        android:id="@+id/spinnerNumMoles"
+        android:layout_width="299dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="48dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/numMolesTxt"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBoardSize" />
+
+    <TextView
+        android:id="@+id/boardSizeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="monospace"
+        android:text="@string/board_size"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#8B4513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTxt" />
+
+    <TextView
+        android:id="@+id/numMolesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
+        android:text="@string/number_of_moles"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#8B4513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boardSizeTxt" />
+
+    <Button
+        android:id="@+id/eraseTimesPlayedBtn"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="290dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/erase_times_played"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clearHighScoresBtn"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="290dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/clear_high_scores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eraseTimesPlayedBtn" />
+
+    <Button
+        android:id="@+id/backBtnOptions"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
